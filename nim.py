@@ -69,7 +69,6 @@ class NimGame:
         while True:
             self.display_piles()
             
-            # Jogada do Player 1
             if self.current_player == player1:
                 self.player_move(player1)
                 if self.check_game_over():
@@ -77,7 +76,6 @@ class NimGame:
                     break
                 self.current_player = player2
             
-            # Jogada do Player 2 (ou Máquina)
             else:
                 if player2 == "Máquina":
                     self.computer_move()
@@ -92,7 +90,6 @@ class NimGame:
         self.display_piles()
         print("\nFim do jogo!")
 
-# Executando o jogo
 if __name__ == "__main__":
     game = NimGame()
     game.play()
